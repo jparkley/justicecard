@@ -2912,16 +2912,16 @@ __webpack_require__.r(__webpack_exports__);
  * includes React and other helpers.
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+
+
+
 /**
  * Next, we will create a fresh React component instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 // require('./components/Example');
-
-
-
-
 
 
 var app = document.getElementById("app");
@@ -68953,6 +68953,22 @@ module.exports = function getSideChannel() {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Card/List": [
+		"./resources/js/Pages/Card/List/index.tsx",
+		"resources_js_Pages_Card_List_index_tsx"
+	],
+	"./Card/List/": [
+		"./resources/js/Pages/Card/List/index.tsx",
+		"resources_js_Pages_Card_List_index_tsx"
+	],
+	"./Card/List/index": [
+		"./resources/js/Pages/Card/List/index.tsx",
+		"resources_js_Pages_Card_List_index_tsx"
+	],
+	"./Card/List/index.tsx": [
+		"./resources/js/Pages/Card/List/index.tsx",
+		"resources_js_Pages_Card_List_index_tsx"
+	],
 	"./Home": [
 		"./resources/js/Pages/Home/index.tsx",
 		"resources_js_Pages_Home_index_tsx"
@@ -69124,7 +69140,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_js_Pages_Home_index_tsx") return "" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Card_List_index_tsx":1,"resources_js_Pages_Home_index_tsx":1}[chunkId]) return "" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
