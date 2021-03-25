@@ -13,6 +13,11 @@ class JusticeCardController extends Controller
         $cards = JusticeCard::get();
         return Inertia::render('Card/List/index', [
             'cards' => $cards,
-        ]);
+        ]);    
     }
+
+    public function add_form() {
+        return Inertia::render('Card/Add/index');
+    }
+
 }

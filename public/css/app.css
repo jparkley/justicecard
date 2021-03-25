@@ -10002,3 +10002,11 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.container {
+  margin-top: 30px;
+}
+
+.row > div[class*=col-] {
+  display: flex;
+  flex: 1 0 auto;
+}

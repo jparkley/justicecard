@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JusticeCardController;
+use App\Models\JusticeCard;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,8 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/card/list', [JusticeCardController::class, 'index'])->name('card.list');
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/card/add', [JusticeCardController::class, 'add_form'])->name('add.form');
+    Route::post('/card/add', [JusticeCardController::class, 'add'])->name('add');
+});

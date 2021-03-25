@@ -34,5 +34,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 1
             ]);
 
+            DB::table('justice_cards')->insert([
+                'title' => 'Resistance toward Justice',
+                'subtitle' => "Myanmar's silent strike against military power",
+                'description' => "Anti-coup protests and strikes have since gripped the nation but are being violently suppressed by the junta's police forces and military soldiers, with widespread reports of shootings, enforced disappearances and torture of political prisoners.",
+                'url' => 'https://www.cnn.com',
+                'user_id' => 1                
+            ]);
     }
+
 }
