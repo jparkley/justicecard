@@ -20,4 +20,19 @@ class JusticeCardController extends Controller
         return Inertia::render('Card/Add/index');
     }
 
+    public function add(Request $request) {
+        $validated_data = $this->validate($request, [
+            'title' => 'required',
+            'subtitle' => 'required',
+            'website' => 'required',
+            'img_url' => 'required',
+            'description' => 'required',
+        ]);
+
+        $card = new JusticeCard($validated_data);
+        $card->user_id = $request->user()->id;
+        $card->save();
+        
+        return redirect()->route('card.list');
+    }    
 }

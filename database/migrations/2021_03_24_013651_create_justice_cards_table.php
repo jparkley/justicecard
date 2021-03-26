@@ -17,8 +17,8 @@ class CreateJusticeCardsTable extends Migration
             $table->id();            
             $table->string('title');
             $table->string('subtitle');
-            $table->text('url')->nullable();
-            $table->text('img_url')->nullable();
+            $table->string('website')->nullable();
+            $table->string('img_url')->nullable();
             $table->string('category')->nullable();
             $table->string('country')->nullable();
             $table->foreignId('user_id');

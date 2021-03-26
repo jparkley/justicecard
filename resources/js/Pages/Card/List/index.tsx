@@ -23,6 +23,7 @@ const CardListPage: React.FC<Props> = ({ cards }) => {
                     />
                     <div className="card-block">
                       <h4 className="card-title">{card.title}</h4>
+                      <h4 className="card-title">{card.country}</h4>
                       <p className="card-text">{card.subtitle}</p>
                       <p className="card-text">{card.description}</p>
                     </div>

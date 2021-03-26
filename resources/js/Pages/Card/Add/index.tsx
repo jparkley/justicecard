@@ -8,9 +8,9 @@ const AddPage: React.FC<Props> = () => {
   const [state, setState] = useState({
     title: "",
     subtitle: "",
-    url: "",
+    website: "",
     img_url: "",
-    descriptioin: "",
+    description: "",
   })
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,15 +39,45 @@ const AddPage: React.FC<Props> = () => {
               onChange={handleChange}
             />
             <label htmlFor="title">SubTitle</label>
-            <input type="text" name="subtitle" className="form-control" />
+            <input
+              type="text"
+              name="subtitle"
+              className="form-control"
+              value={state.subtitle}
+              onChange={handleChange}
+            />
             <label htmlFor="website">Website</label>
-            <input type="text" name="website" className="form-control" />
+            <input
+              type="text"
+              name="website"
+              className="form-control"
+              value={state.website}
+              onChange={handleChange}
+            />
             <label htmlFor="country">Country</label>
-            <input type="text" name="country" className="form-control" />
+            <input
+              type="text"
+              name="country"
+              className="form-control"
+              value={state.country}
+              onChange={handleChange}
+            />
             <label htmlFor="img_url">Image URL</label>
-            <input type="text" name="img_url" className="form-control" />
+            <input
+              type="text"
+              name="img_url"
+              className="form-control"
+              value={state.img_url}
+              onChange={handleChange}
+            />
             <label htmlFor="description">Description</label>
-            <input type="text" name="description" className="form-control" />
+            <input
+              type="text"
+              name="description"
+              className="form-control"
+              value={state.description}
+              onChange={handleChange}
+            />
             <input type="submit" className="form-control" />
           </form>
         </div>
